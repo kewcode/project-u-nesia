@@ -1,4 +1,4 @@
-const version = "1";
+const version = "1.0.0";
 const cacheName = `u-nesia-${version}`;
 self.addEventListener('install', e => {
   e.waitUntil(
