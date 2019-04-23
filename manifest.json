@@ -1,6 +1,6 @@
 {
 
-    "name": "u-nesia.com",
+    "name": "U Nesia",
     "short_name": "u-nesia",
     "icons": [{
             "src": "/images/touch/android-launchericon-48-48.png",
@@ -34,7 +34,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "/",
     "scope": "/",
     "display": "standalone",
     "background_color": "#2196F3",
