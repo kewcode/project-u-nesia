@@ -37,7 +37,7 @@ body {
 }
 
 a {
-    color: #CCFFCC;
+    color: #66CCFF;
 }
 
 a:hover,
@@ -84,12 +84,12 @@ p {
 }
 
 p.lead {
-    color: #CCFFCC;
+    color: #0099CC;
     margin-bottom: 2rem;
 }
 
 .text-primary {
-    color: #CCFFCC !important;
+    color: #0099CC !important;
 }
 
 .light-font {

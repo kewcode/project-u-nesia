@@ -550,13 +550,14 @@
                     </p>
                     <div class=" d-block d-sm-inline-block">
                         <p class="mb-2">
-                            <span class="ti-email mr-2"></span> <a class="mr-4"
+                            <span class="ti-email mr-2"></span> <a class="text-dark mr-4"
                                 href="mailto:support@mobileapp.com">ari@u-nesia.com</a>
                         </p>
                     </div>
                     <div class="d-block d-sm-inline-block">
                         <p class="mb-0">
-                            <span class="ti-headphone-alt mr-2"></span> <a href="tel:6285787995896">6285-7879-95896</a>
+                            <span class="ti-headphone-alt mr-2"></span> <a class="text-dark"
+                                href="tel:6285787995896">6285-7879-95896</a>
                         </p>
                     </div>
 
@@ -576,8 +577,14 @@
     <!-- // end .section -->
     <footer class="my-5 text-center">
         <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2019. ALL RIGHTS RESERVED. u-nesia BY <a href="#">Ari
-                    Bahtiar</a></small></p>
+        <p class="mb-2">
+            <small>
+                COPYRIGHT © 2019. ALL RIGHTS RESERVED.
+                <br>
+                U-NESIA BY
+                <a href="#">Ari Bahtiar</a>
+            </small>
+        </p>
 
         <small>
             <a href="#" class="m-2">PRESS</a>
@@ -593,6 +600,15 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(function () {
+                    console.log("Service Worker Registered");
+                });
+        }
+    </script>
 
 </body>
 
