@@ -20,7 +20,6 @@ self.addEventListener('install', e => {
           `/images/graphic.png`,
           `/images/iphonex.png`,
           `/images/logo.png`,
-          `/images/logoa.png`,
           `/images/perspective.png`,
           `/images/playicon.png`,
           `/images/screen1.jpg`,
