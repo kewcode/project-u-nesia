@@ -34,9 +34,9 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "index.html?launcher=true",
+    "start_url": "/",
     "scope": "/",
     "display": "standalone",
-    "background_color": "#2196F3",
-    "theme_color": "#003399"
+    "theme_color": "#317EFB",
+    "background_color": "#2196F3"
 }
