@@ -4,14 +4,14 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
-          `/`,
-          `/fonts/themify.eot`,
-          `/fonts/themify.svg`,
-          `/fonts/themify.ttf`,
-          `/fonts/themify.woff`,
+          `/`
+          // `/fonts/themify.eot`,
+          // `/fonts/themify.svg`,
+          // `/fonts/themify.ttf`,
+          // `/fonts/themify.woff`,
           `/css/bootstrap.min.css`,
           `/css/owl.carousel.min.css`,
-          `/css/style.css`,
+          // `/css/style.css`,
           `/css/themify-icons.css`,
           `/images/appleicon.png`,
           `/images/client.png`,
@@ -27,9 +27,7 @@ self.addEventListener('install', e => {
           `/images/screen3.jpg`,
           `/js/bootstrap.bundle.min.js`,
           `/js/jquery-3.2.1.min.js`,
-          `/js/owl.carousel.min.js`,
-          `/js/script.js`,
-          `index.html`
+          `/js/owl.carousel.min.js`
         ])
         .then(() => self.skipWaiting());
     })

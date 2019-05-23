@@ -24,9 +24,54 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .btn-register-mobile {
+            position: fixed;
+            bottom: 0;
+            z-index: 1000;
+            display: none;
+            width: 100%;
+        }
+
+        @media screen and (max-width : 700px) {
+            .btn-register-mobile {
+                display: block
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Custom Chat App -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-register-mobile" data-toggle="modal" data-target="#register">
+        Register
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Nav Menu -->
 
@@ -51,10 +96,15 @@
                                             class="sr-only">(current)</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#features">FEATURES</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">GALLERY</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a> </li>
+                                <!-- <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a> </li> -->
+                                <li class="nav-item"> <a class="nav-link" href="#pricing">DEVELOPER</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
-                                <li class="nav-item"><a href="#"
-                                        class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Download</a></li>
+                                <!-- <li class="nav-item">
+                                    <a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Download</a>
+                                </li> -->
+                                <li class="nav-item" data-toggle="modal" data-target="#register">
+                                    <a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Register</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -422,62 +472,56 @@
     <div class="section" id="pricing">
         <div class="container">
             <div class="section-title">
-                <small>PRICING</small>
-                <h3>Upgrade to Pro</h3>
+                <small>DEVELOPER</small>
+                <h3>Simple With API</h3>
             </div>
 
             <div class="card-deck">
                 <div class="card pricing">
                     <div class="card-head">
-                        <small class="text-primary">PERSONAL</small>
-                        <span class="price">$1<sub>/m</sub></span>
+                        <small class="text-primary">CHATTING</small>
+                        <!-- <span class="price">Free<sub>/m</sub></span> -->
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">10 Projects</div>
-                        <div class="list-group-item">5 GB Storage</div>
-                        <div class="list-group-item">Basic Support</div>
-                        <div class="list-group-item"><del>Collaboration</del></div>
-                        <div class="list-group-item"><del>Reports and analytics</del></div>
+                        <div class="list-group-item">Chatting</div>
+                        <div class="list-group-item">Group Chat</div>
+                        <div class="list-group-item">Chat Bot</div>
+                        <!-- <div class="list-group-item">-</div>
+                        <div class="list-group-item">-</div> -->
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Read More</a>
                     </div>
                 </div>
                 <div class="card pricing popular">
                     <div class="card-head">
-                        <small class="text-primary">FOR TEAMS</small>
-                        <span class="price">$10<sub>/m</sub></span>
+                        <small class="text-primary">SOCIAL MEDIA</small>
+                        <!-- <span class="price">$10<sub>/m</sub></span> -->
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">Unlimited Projects</div>
-                        <div class="list-group-item">100 GB Storage</div>
-                        <div class="list-group-item">Priority Support</div>
-                        <div class="list-group-item">Collaboration</div>
-                        <div class="list-group-item">Reports and analytics</div>
+                        <div class="list-group-item">Manage Boot</div>
+                        <div class="list-group-item">Manage Snap</div>
+                        <div class="list-group-item">Manage Profile</div>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Read More</a>
                     </div>
                 </div>
                 <div class="card pricing">
                     <div class="card-head">
-                        <small class="text-primary">ENTERPRISE</small>
-                        <span class="price">$300<sub>/m</sub></span>
+                        <small class="text-primary">BUSINESS</small>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">Unlimited Projects</div>
-                        <div class="list-group-item">Unlimited Storage</div>
-                        <div class="list-group-item">Collaboration</div>
-                        <div class="list-group-item">Reports and analytics</div>
-                        <div class="list-group-item">Web hooks</div>
+                        <div class="list-group-item">Payment</div>
+                        <div class="list-group-item">Autherization</div>
+                        <div class="list-group-item">Advertisement</div>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Read More</a>
                     </div>
                 </div>
             </div>
             <!-- // end .pricing -->
-
 
         </div>
 
