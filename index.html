@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="U-NESIA | Chatting, Social, and Business App for Indonesia">
     <meta name="keywords" content="Chatting, Social, Business, payment, registration">
-
+    <meta name="theme-color">
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="shortcut icon" type="image/png" href="https://u-nesia.com/images/favicon.png" />
@@ -25,7 +25,7 @@
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-        .btn-register-mobile {
+        .btn-login-mobile {
             position: fixed;
             bottom: 0;
             z-index: 1000;
@@ -34,38 +34,168 @@
         }
 
         @media screen and (max-width : 700px) {
-            .btn-register-mobile {
+            .btn-login-mobile {
                 display: block
             }
+        }
+
+        #return-to-top {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            padding: 12px;
+            color: #fff;
+            text-align: center;
+            z-index: 100000;
+            background: aqua;
+        }
+
+        @media screen and (max-width:600px) {
+            #return-to-top {
+                bottom: 2px;
+                right: 2px;
+                background: transparent
+            }
+        }
+
+        .megamenu {
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: #fff;
+            z-index: 1000;
+            margin-top: 100px;
+            box-shadow: 1px 2px 3px #ccc;
+
+        }
+
+        .hide {
+            display: none
+        }
+
+        .show {
+            display: block
+        }
+
+        .btn-app {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .btn-round {
+            width: 40px;
+            height: 40px;
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .nav-mobile-app {
+            padding-top: 20px;
         }
     </style>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
-    <!-- Custom Chat App -->
+    <!-- Return to Top -->
+    <a class="hide" href="javascript:" id="return-to-top">
+        <i class="ti-arrow-up"></i>
+    </a>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-register-mobile" data-toggle="modal" data-target="#register">
-        Register
-    </button>
+    <!-- Menu Mobile -->
+    <div class="bg-primary btn-login-mobile text-center py-2">
+        <a href="#" data-toggle="modal" data-target="#login" class="btn btn-outline-light">login</a>
+        <a href="#download" class="btn btn-outline-light">
+            <i class="ti-download ti-1x"></i> U-APP
+        </a>
+    </div>
+
+    <div class="megamenu" id="allapp">
+        <div class="row mx-lg-4">
+            <div class="col-sm-6 col-lg-3 mt-2">
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    U-CHAT
+                </a>
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    U-CURHAT
+                </a>
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    U-HUNGRY
+                </a>
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    U-STORE
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3 mt-2">
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    U-PORTFOLIO
+                </a>
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    U-WORK
+                </a>
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    BOSQUE
+                </a>
+                <a class="btn btn-block btn-primary btn-app" href="#">
+                    FOODIES
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3 pt-3">
+                <h5>U-NESIA</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Necessitatibus in veritatis, facilis eligendi sunt, culpa autem
+                    harum porro earum.</p>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <h5>U-APP</h5>
+                <img src="https://source.unsplash.com/250x150/?sig=4" alt="..." style="width: 100%;">
+            </div>
+            <div class="col-sm-12 text-right">
+                <a href="#" class="btn btn-outline-danger mt-4 btn-round" onclick="megamenu()">
+                    <i class="ti-close"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalScrollableTitle">Register</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type=" button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Register</button>
+                    <div class="container">
+                        <a style="background:#6610f2" href="#" class="btn text-white btn-lg btn-block">
+                            <i class="ti-facebook"></i>
+                            Login With facebook
+                        </a>
+                        <a href="#" class="btn btn-danger btn-lg btn-block">
+                            <i class="ti-google"></i>
+                            Login With Google
+                        </a>
+                        <a href="#" class="btn btn-primary btn-lg btn-block">
+                            <i class="ti-twitter"></i>
+                            Login With Twitter
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-lg btn-block">
+                            <i class="ti-github"></i>
+                            Login With Github
+                        </a>
+                        <a href="#" class="btn btn-success btn-lg btn-block">
+                            <i class="ti-email"></i>
+                            Login With Email
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,37 +206,38 @@
     <!-- Nav Menu -->
 
     <div class="nav-menu fixed-top">
-        <div class="container">
+        <div class="container nav-mobile-app">
             <div class="row">
                 <div class="col-md-12">
-                    <nav class="navbar navbar-dark navbar-expand-lg">
-                        <!-- <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="150px"
-                                class="img-fluid" alt="logo"></a> -->
-                        <a class="navbar-brand" href="index.html">
+                    <nav class="navbar navbar-dark navbar-expand-lg ">
+
+                        <a class="navbar-brand " href="index.html">
                             <b class="h3">U-NESIA</b>
                         </a>
 
+                        <a href="#" class="btn hide-lg" onclick="megamenu()">
+                            <i class="ti-layout-grid2 ti-2x"></i>
+                        </a>
+                        <div class="collapse navbar-collapse hide-md" id="navbar">
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-                            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
-                                class="navbar-toggler-icon"></span> </button>
-                        <div class="collapse navbar-collapse" id="navbar">
+
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span
-                                            class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#features">FEATURES</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#gallery">GALLERY</a> </li>
-                                <!-- <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a> </li> -->
-                                <li class="nav-item"> <a class="nav-link" href="#pricing">DEVELOPER</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
-                                <!-- <li class="nav-item">
-                                    <a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Download</a>
-                                </li> -->
-                                <li class="nav-item" data-toggle="modal" data-target="#register">
-                                    <a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Register</a>
+
+                                <li class="nav-item" data-toggle="modal" data-target="#login">
+                                    <a href="#" class="btn btn-outline-light  mx-1 my-2">login</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="#download" class="btn btn-outline-light mx-1 my-2">
+                                        <i class="ti-download ti-1x"></i> U-APP
+                                    </a>
+                                </li>
+
+                                <a href="#" class="btn mt-1" onclick="megamenu()">
+                                    <i class="ti-layout-grid2 ti-2x"></i>
+                                </a>
                             </ul>
                         </div>
+
                     </nav>
                 </div>
             </div>
@@ -225,7 +356,7 @@
                 <h3>Do more with our app</h3>
             </div>
 
-            <ul class="nav nav-tabs nav-justified" role="tablist">
+            <ul class="nav nav-tabs nav-justified">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#communication">Communication</a>
                 </li>
@@ -471,7 +602,7 @@
 
 
 
-    <div class="section" id="pricing">
+    <div class="section" id="developer">
         <div class="container">
             <div class="section-title">
                 <small>DEVELOPER</small>
@@ -482,14 +613,15 @@
                 <div class="card pricing">
                     <div class="card-head">
                         <small class="text-primary">CHATTING</small>
-                        <!-- <span class="price">Free<sub>/m</sub></span> -->
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">Chatting</div>
-                        <div class="list-group-item">Group Chat</div>
-                        <div class="list-group-item">Chat Bot</div>
-                        <!-- <div class="list-group-item">-</div>
-                        <div class="list-group-item">-</div> -->
+                        <div class="list-group-item">Private Chat</div>
+                        <div class="list-group-item">Private Group</div>
+                        <div class="list-group-item">Public Group</div>
+                        <div class="list-group-item">Private Voice Call</div>
+                        <div class="list-group-item">Private Video Call</div>
+                        <div class="list-group-item">Group Voice Call</div>
+                        <div class="list-group-item">Group Video Call</div>
                     </ul>
                     <div class="card-body">
                         <a href="#" class="btn btn-primary btn-lg btn-block">Read More</a>
@@ -498,12 +630,13 @@
                 <div class="card pricing popular">
                     <div class="card-head">
                         <small class="text-primary">SOCIAL MEDIA</small>
-                        <!-- <span class="price">$10<sub>/m</sub></span> -->
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">Manage Boot</div>
-                        <div class="list-group-item">Manage Snap</div>
-                        <div class="list-group-item">Manage Profile</div>
+                        <div class="list-group-item">Posting Text</div>
+                        <div class="list-group-item">Posting Image</div>
+                        <div class="list-group-item">Posting Video</div>
+                        <div class="list-group-item">Posting Podcast</div>
+                        <div class="list-group-item">Snap Image/Video</div>
                     </ul>
                     <div class="card-body">
                         <a href="#" class="btn btn-primary btn-lg btn-block">Read More</a>
@@ -514,8 +647,13 @@
                         <small class="text-primary">BUSINESS</small>
                     </div>
                     <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Curiculum Vitae (CV)</div>
+                        <div class="list-group-item">Portofolio</div>
                         <div class="list-group-item">Payment</div>
                         <div class="list-group-item">Autherization</div>
+                        <div class="list-group-item">Post Job</div>
+                        <div class="list-group-item">Martketplace</div>
+                        <div class="list-group-item">POS System</div>
                         <div class="list-group-item">Advertisement</div>
                     </ul>
                     <div class="card-body">
@@ -523,7 +661,7 @@
                     </div>
                 </div>
             </div>
-            <!-- // end .pricing -->
+            <!-- // end .developer -->
 
         </div>
 
@@ -569,7 +707,7 @@
 
 
 
-    <div class="section bg-gradient">
+    <div class="section bg-gradient" id="download">
         <div class="container">
             <div class="call-to-action">
 
@@ -652,11 +790,37 @@
             navigator.serviceWorker
                 .register('/sw.js')
                 .then(function () {
-                    console.log("Service Worker Registered");
+                    console.log("Service Worker logined");
                 });
         }
-    </script>
 
+        var btn = $('#return-to-top');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.removeClass('hide');
+            } else {
+                btn.addClass('hide');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, '300');
+        });
+
+        $(document).ready(function () {
+            $(".megamenu").on("click", function (e) {
+                e.stopPropagation();
+            });
+        });
+
+        function megamenu() {
+            $('#allapp').toggleClass("show")
+        }
+    </script>
 </body>
 
 </html>
